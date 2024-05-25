@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Form</title>
+</head>
+<body>
+<h1>User Form</h1>
+<form action="#" th:action="@{/userForm}" th:object="${userForm}" method="post">
+    <div th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+    <p>
+        <label for="name">名前:</label>
+        <input type="text" id="name" th:field="*{name}" />
+    </p>
+    <p>
+        <button type="submit">Submit</button>
+    </p>
+</form>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!-- result.html -->
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Typing Game - Result</title>
+</head>
+
+<body>
+
+	<p><span th:text="${word}"></span></p>
+
+	<form action="/check" method="post">
+		<input type="text" name="userInput">
+		<button type="submit">Submit</button>
+	</form>
+	<p>Score: <span th:text="${score}"></span></p>
+	<p>Miss: <span th:text="${miss}"></span></p>
+</body>
+
+</html>

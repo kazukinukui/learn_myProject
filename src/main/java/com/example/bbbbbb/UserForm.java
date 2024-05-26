@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotBlank;
 
 public class UserForm {
     
-    @NotBlank(message = "名前を入力してください")
+    @NotBlank(message = "名前を入力してください(other1です)")
     private String name;
 
     public String getName() {
